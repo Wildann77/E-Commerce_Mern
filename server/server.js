@@ -59,6 +59,19 @@ app.use('/api/shop/review', shopReviewRouter);
 
 app.use('/api/common/feature', commonFeatureRouter);
 
+// Root route to prevent 404 on base URL
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'Welcome to E-Commerce API',
+    status: 'Running',
+    documentation: 'https://github.com/Wildann77/E-Commerce_Mern', // Ganti dengan repo Anda jika mau
+    endpoints: {
+      health: '/api/health',
+      products: '/api/shop/products/get'
+    }
+  });
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.status(200).json({
