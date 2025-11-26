@@ -1,0 +1,9 @@
+{
+  "printWidth": 90, // default, kamu bisa ganti jadi 60 kalau mau lebih pendek
+  "jsxSingleQuote": false,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "semi": true,
+  "singleQuote": true
+}
